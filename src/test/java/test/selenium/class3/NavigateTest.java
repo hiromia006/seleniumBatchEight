@@ -15,6 +15,15 @@ public class NavigateTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
+        driver.navigate().to("https://www.saucedemo.com/");
+        Thread.sleep(2000);
+        driver.navigate().back();
+        Thread.sleep(2000);
+        driver.navigate().forward();
+        Thread.sleep(2000);
+        driver.navigate().refresh();
+        Thread.sleep(2000);
+
         driver.quit();
     }
 }
