@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
@@ -14,8 +16,10 @@ public class NewTabAndWindow {
         WebDriver driver = new FirefoxDriver();
         driver.get("https://demoqa.com/browser-windows");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(30));
 
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.className("main-header"))));
         System.out.println(driver.findElement(By.className("main-header")).getText());
 
         //Store the ID of the original window
