@@ -7,7 +7,7 @@
                 <methods>
                     <include name="loginShouldSucceed"/>
                     <include name="checkFirstProduct"/>
-                    <include name="checkTittle"/>
+                    <exclude name="checkTittle"/>
                 </methods>
             </class>
             <class name="test.selenium.testng.MethodAnnotationTest">

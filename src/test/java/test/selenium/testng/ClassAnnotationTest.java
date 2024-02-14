@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ClassAnnotationTest extends BaseClassTest {
-    @Test(priority = 1)
+    @Test(priority = 1, enabled = false)
     public void loginShouldSucceed() throws InterruptedException {
 
         driver.findElement(By.id("react-burger-menu-btn")).click();
