@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/jannat/githubProjects/seleniumBatchEight">
+        <classes>
+            <class name="test.selenium.testng.ClassAnnotationTest">
+                <methods>
+                    <include name="loginShouldSucceed"/>
+                    <include name="checkFirstProduct"/>
+                    <exclude name="checkTittle"/>
+                </methods>
+            </class>
+            <class name="test.selenium.testng.MethodAnnotationTest">
+                <methods>
+                    <include name="loginShouldSucceed"/>
+                    <include name="checkFirstProduct"/>
+                    <include name="checkTittle"/>
+                </methods>
+            </class>
+            <class name="test.selenium.testng.TestCases">
+                <methods>
+                    <include name="loginShouldSucceed"/>
+                    <include name="checkFirstProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
